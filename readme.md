@@ -19,7 +19,7 @@ A nifty javascript library,
 </script>
 ```
 
-The above animation, exists on a single line. If you want multiple levels, you can pass in a list of strings to the frame. Or include your own carriage returns `/n`'s
+The above animation, exists on a single line. If you want multiple levels, you can pass in a list of strings to the frame. Or include your own carriage returns (`/n`'s)
 
 ```js
 <script>
@@ -40,6 +40,35 @@ You can also pass through timing functions, if you want to have frames animate q
 	domAnimator.addFrame([[], [], []], 500);
 	domAnimator.addFrame([[], [], []], 1000);
 	domAnimator.animate();
+</script>
+```
+
+Or, if you like, you can set the one speed, for all of the frames.
+
+```js
+<script>
+	var domAnimatior = new DomAnimator();
+	domAnimator.addFrame('o_o');
+	domAnimator.addFrame('-_o');
+	domAnimator.setSpeed(1000); // 1000ms
+	domAnimator.animate();
+</script>
+```
+
+If you want to stop the animation, for any given reason:
+
+```js
+<script>
+	// Setup
+	var domAnimatior = new DomAnimator();
+	domAnimator.addFrame('o_o');
+	domAnimator.addFrame('-_o');
+	domAnimator.animate();
+
+	// After 10 seconds.
+	setTimeout(function() {
+		domAnimator.stop(); // Stop the animation
+	}, 10000);
 </script>
 ```
 
