@@ -1,0 +1,30 @@
+/*
+ * DomAnimator.js
+ *
+ * MIT licensed
+ * Copyright (C) 2015 Tim Holman, http://tholman.com
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 200%;
+    margin: 0px;
+}
+
+/*********************************************
+ * 3rd party
+ *********************************************/
+iframe {
+    margin-bottom: -4px;
+    margin-left: 15px;
+}
+
+.github-link {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+}
