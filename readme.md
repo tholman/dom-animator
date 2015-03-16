@@ -1,96 +1,53 @@
-# Overscroll.js
+# Dom Animator
 
-A tiny javascript library, to capture the moments when you've scrolled more than the screen allows (osx/ios)... so we can sneak in some little easter eggs. [Here's a live demo](http://tholman.com/overscroll), [and here's a video ](http://tholman.com/overscroll/video)!
+A nifty javascript library, 
 
 ### Instructions
 
-`Overscroll.js` is a stand alone library (no jquery, or the likes) so usage is pretty straight forward. All styling of easter egg elements is up to the user, `Overscroll.js` only handles moving your elements onto/off the screen, when you are scrolling beyond the pages height.
-
-#### HTML
-
-There aren't any restrictions for the `html` overscroll can bind too, that said, you do need to position them (ideally off screen) yourself. Overscroll will handle their movement.
-
-```html
-<!-- Any element works, really -->
-<img class="easter-egg" src="./img/awesome-source.jpg" />
-```
-
-#### CSS
-You'll need to position the element you want to slide in/out of the screen initially. Since `overscroll` edits the transform of your element, you should try to avoid using transforms on it too.
-
-That said, your positioning doesn't need to be anything too complex. For example:
-
-```css
-.easter-egg {
-	/* Dimensions */
-	width: 300px;
-	height: 500px;
-	
-	/* Fixed position */
-	position: fixed;
-	left: 50%;
-	top: 0px;
-
-	/* Centered horizontally, and hidden above screen */
-	margin-left: -150px;
-	margin-top: -500px;
-}
-```
-
-Above, the `margin-top: -500px` hides the element above the top of the screen, since overscroll will handle showing it when the there is overscroll in that direction.
+`dom-animator.js` is a stand alone library (no jquery, or the likes) so usage is pretty straight forward. You won't need any CSS, or HTML... just javascript. (since the animations live in comment nodes, in the dom, only)
 
 #### JS
 
-`Overscroll.js` is fairly straight forward when it comes to kicking it off, you'll need to create a new instance of overscroll (and include the script in the page), and then bind elements to it once they have been rendered. You can do this with `document.querySelector`.
+`DomAnimator.js` can be simple, or complex, depending on what you're trying to achieve with your animation. You'll need to create a new instance of domanimator (having already included the script in the page). Here is the most simple example, a winking face.
 
-```html
-<img class="easter-egg-element" src="./img/awesome-source.png" />
-
+```js
 <script>
-var overscroll = new Overscroll();
-window.onload = function() {
-	overscroll.bindElement(document.querySelector('.easter-egg-element'));
-}
+	var domAnimatior = new DomAnimator();
+	domAnimator.addFrame('o_o');
+	domAnimator.addFrame('-_o');
+	domAnimator.animate();
 </script>
 ```
 
-There are options, for when the easter egg is at the top, or bottom.
+The above animation, exists on a single line. If you want multiple levels, you can pass in a list of strings to the frame. Or include your own carriage returns `/n`'s
 
-```html
-<img class="easter-egg-element top" src="./img/awesome-source.png" />
-<img class="easter-egg-element bottom" src="./img/awesome-source.png" />
-
+```js
 <script>
-var overscroll = new Overscroll();
-window.onload = function() {
-	overscroll.bindElement(document.querySelector('.easter-egg-element.top'), 'top');
-	overscroll.bindElement(document.querySelector('.easter-egg-element.bottom'), 'bottom');
-}
+	var domAnimatior = new DomAnimator();
+	domAnimator.addFrame([[], [], []]);
+	domAnimator.addFrame([[], [], []]);
+	domAnimator.addFrame([[], [], []]);
+	domAnimator.animate();
+</script>
+
+```
+You can also pass through timing functions, if you want to have frames animate quicker or slower. All timeframes are in milliseconds. If timeframes aren't passed in, the animation will default to 500ms intervals
+
+```js
+<script>
+	var domAnimatior = new DomAnimator();
+	domAnimator.addFrame([[], [], []], 1000);
+	domAnimator.addFrame([[], [], []], 500);
+	domAnimator.addFrame([[], [], []], 1000);
+	domAnimator.animate();
 </script>
 ```
 
-And finally, a delta, to show how sensitive the scroll should be, when in the overscroll area... this makes it easier for people to find, but isn't really necessary.
+#### Examples/ In the wild!
 
-```html
-<img class="easter-egg-element" src="./img/awesome-source.png" />
+Here's a small gif of `dom-animator.js` in action (below)... You should really look at the [demo](http://tholman.com/dom-animator) though... there's also a [video](http://tholman.com/dom-animator/video)!, if you're really confused.
 
-<script>
-var overscroll = new Overscroll();
-window.onload = function() {
-	overscroll.bindElement(document.querySelector('.easter-egg-element'), 'top', 2);
-}
-</script>
-```
-
-#### Image/Example
-
-Here's a couple of screenshots of `Overscroll.js` in action. You should really look at the [demo](http://tholman.com/overscroll) though, to get a full feel for the interactions, or check out the [video](http://tholman.com/overscroll/video)!
-
-Overscroll on the bottom:
 ![Overscroll.js doing its thing](http://i.imgur.com/PSvRl9Z.png "Overscroll Bottom")
-
-Overscroll on the top:
-![Overscroll.js doing its thing](http://i.imgur.com/sHmWDsR.png "Overscroll Top")
 
 ###Browser support
 
