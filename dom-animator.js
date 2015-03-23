@@ -56,6 +56,7 @@ var DomAnimator = (function() {
 
     function swapWhitespace( array ) {
         var i = 0;
+
         for( i; i < array.length; i++ ) {
             array[i] = array[i].replace(/ /g, whiteSpaceString);
         }

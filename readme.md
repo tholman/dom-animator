@@ -1,6 +1,6 @@
 # Dom Animator
 
-A nifty javascript library, 
+A nifty javascript library, used to show small ascii animations within comments in your dom. Its a little easter egg for anyone inspecting your code. Nothing more, nothing less.
 
 ### Instructions
 
@@ -24,8 +24,8 @@ The above animation, exists on a single line. If you want multiple levels, you c
 ```js
 <script>
 	var domAnimatior = new DomAnimator();
-	domAnimator.addFrame([['0_0'], [' | '], [' | ']]);
-	domAnimator.addFrame([['0_-'], [' | '], [' | ']]);
+	domAnimator.addFrame(['0_0', ' | ', ' | ']);
+	domAnimator.addFrame(['0_-', ' | ', ' | ']);
 	domAnimator.animate();
 </script>
 ```
