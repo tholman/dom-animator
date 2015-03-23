@@ -24,38 +24,24 @@ The above animation, exists on a single line. If you want multiple levels, you c
 ```js
 <script>
 	var domAnimatior = new DomAnimator();
-	domAnimator.addFrame([[], [], []]);
-	domAnimator.addFrame([[], [], []]);
-	domAnimator.addFrame([[], [], []]);
-	domAnimator.animate();
-</script>
-
-```
-You can also pass through timing functions, if you want to have frames animate quicker or slower. All timeframes are in milliseconds. If timeframes aren't passed in, the animation will default to 500ms intervals
-
-```js
-<script>
-	var domAnimatior = new DomAnimator();
-	domAnimator.addFrame([[], [], []], 1000);
-	domAnimator.addFrame([[], [], []], 500);
-	domAnimator.addFrame([[], [], []], 1000);
+	domAnimator.addFrame([['0_0'], [' | '], [' | ']]);
+	domAnimator.addFrame([['0_-'], [' | '], [' | ']]);
 	domAnimator.animate();
 </script>
 ```
 
-Or, if you like, you can set the one speed, for all of the frames.
+If you like, you can set the one speed, for all of the frames. Otherwise they will default to 500ms intervals. (these are ascii animations, no need for 60fps)
 
 ```js
 <script>
 	var domAnimatior = new DomAnimator();
 	domAnimator.addFrame('o_o');
 	domAnimator.addFrame('-_o');
-	domAnimator.setSpeed(1000); // 1000ms
-	domAnimator.animate();
+	domAnimator.animate(1000); //ms
 </script>
 ```
 
-If you want to stop the animation, for any given reason:
+If you want to stop the animation, for any given reason, just call `stop`
 
 ```js
 <script>
