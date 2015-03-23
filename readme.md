@@ -65,7 +65,7 @@ You can see the animation in the console on the [demo page](http://tholman.com/d
 
 ###Browser support
 
-Dom animator has been tested in the latest stable builds of Safari, Chrome & Firefox... chrome displays the a little cleaner, since it supports newlines in the console. But all the browsers work.
+Dom animator has been tested in the latest stable builds of Safari, Chrome & Firefox... Chrome displays the a little cleaner, since it supports newlines in the console. But all the browsers work.
 
 ### License
 
