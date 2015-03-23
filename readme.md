@@ -58,7 +58,7 @@ If you want to stop the animation, for any given reason, just call `stop`
 </script>
 ```
 
-#### Examples/ In the wild!
+#### Examples / In the wild!
 
 You can see the animation in the console on the [demo page](http://tholman.com/dom-animator). There's also a [video](http://tholman.com/dom-animator/video), if you're really confused.
 
