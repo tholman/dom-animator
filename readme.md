@@ -19,7 +19,7 @@ A nifty javascript library,
 </script>
 ```
 
-The above animation, exists on a single line. If you want multiple levels, you can pass in a list of strings to the frame. Or include your own carriage returns (`/n`'s)
+The above animation, exists on a single line. If you want multiple levels, you can pass in a list of strings to the frame. Or include your own carriage returns (`\n`'s)
 
 ```js
 <script>
