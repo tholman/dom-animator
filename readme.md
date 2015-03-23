@@ -60,13 +60,12 @@ If you want to stop the animation, for any given reason, just call `stop`
 
 #### Examples/ In the wild!
 
-Here's a small gif of `dom-animator.js` in action (below)... You should really look at the [demo](http://tholman.com/dom-animator) though... there's also a [video](http://tholman.com/dom-animator/video)!, if you're really confused.
+ You can see the animation in the console, on the [demo page](http://tholman.com/dom-animator) There's also a [video](http://tholman.com/dom-animator/video)!, if you're really confused.
 
-![Overscroll.js doing its thing](http://i.imgur.com/PSvRl9Z.png "Overscroll Bottom")
 
 ###Browser support
 
-Overscroll has been tested in the latest stable builds of Safari, Chrome... IE & Firefox don't really have the "overscroll" zones, so they won't work. Its just for fun... so not the end of the world ;)
+Dom animator has been tested in the latest stable builds of Safari, Chrome & Firefox... chrome displays the a little cleaner, since it supports newlines in the console. But all the browsers work.
 
 ### License
 
