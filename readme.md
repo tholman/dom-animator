@@ -1,10 +1,10 @@
 # Dom Animator
 
-A nifty javascript library, used to show small ascii animations within comments in your dom. Its a little easter egg for anyone inspecting your code. Nothing more, nothing less.
+A nifty JavaScript library, used to show small ascii animations within comments in your dom. It's a little easter egg for anyone inspecting your code. Nothing more, nothing less.
 
 ### Instructions
 
-`dom-animator.js` is a stand alone library (no jquery, or the likes) so usage is pretty straight forward. You won't need any CSS, or HTML... just javascript. (since the animations live in comment nodes, in the dom, only)
+`dom-animator.js` is a stand alone library (no jQuery, or the likes) so usage is pretty straight forward. You won't need any CSS, or HTML... just JavaScript. (since the animations live in comment nodes, in the dom, only)
 
 #### JS
 
@@ -12,7 +12,7 @@ A nifty javascript library, used to show small ascii animations within comments 
 
 ```js
 <script>
-	var domAnimatior = new DomAnimator();
+	var domAnimator = new DomAnimator();
 	domAnimator.addFrame('o_o');
 	domAnimator.addFrame('-_o');
 	domAnimator.animate();
@@ -23,7 +23,7 @@ The above animation, exists on a single line. If you want multiple levels, you c
 
 ```js
 <script>
-	var domAnimatior = new DomAnimator();
+	var domAnimator = new DomAnimator();
 	domAnimator.addFrame(['0_0', ' | ', ' | ']);
 	domAnimator.addFrame(['0_-', ' | ', ' | ']);
 	domAnimator.animate();
@@ -34,7 +34,7 @@ If you like, you can set the one speed, for all of the frames. Otherwise they wi
 
 ```js
 <script>
-	var domAnimatior = new DomAnimator();
+	var domAnimator = new DomAnimator();
 	domAnimator.addFrame('o_o');
 	domAnimator.addFrame('-_o');
 	domAnimator.animate(1000); //ms
@@ -46,7 +46,7 @@ If you want to stop the animation, for any given reason, just call `stop`
 ```js
 <script>
 	// Setup
-	var domAnimatior = new DomAnimator();
+	var domAnimator = new DomAnimator();
 	domAnimator.addFrame('o_o');
 	domAnimator.addFrame('-_o');
 	domAnimator.animate();
@@ -65,7 +65,7 @@ You can see the animation in the console on the [demo page](http://tholman.com/d
 
 ###Browser support
 
-Dom animator has been tested in the latest stable builds of Safari, Chrome & Firefox... Chrome displays the a little cleaner, since it supports newlines in the console. But all the browsers work.
+Dom Animator has been tested in the latest stable builds of Safari, Chrome & Firefox... Chrome displays the a little cleaner, since it supports newlines in the console. But all the browsers work.
 
 ### License
 
