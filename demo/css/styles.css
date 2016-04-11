@@ -41,7 +41,7 @@ h2 {
     font-size: 22px;
 }
 
-.key {
+kbd {
       font-family: 'Mallanna', sans-serif;
       text-transform: uppercase;
       padding-left: 10px;
