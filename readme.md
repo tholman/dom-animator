@@ -1,6 +1,6 @@
 # Dom Animator
 
-A nifty JavaScript library, used to show small ascii animations within comments in your dom. It's a little easter egg for anyone inspecting your code. Nothing more, nothing less.
+A nifty JavaScript library, used to show small ASCII animations within comments in your dom. It's a little easter egg for anyone inspecting your code. Nothing more, nothing less.
 
 ### Instructions
 
