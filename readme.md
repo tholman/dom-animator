@@ -63,7 +63,7 @@ If you want to stop the animation, for any given reason, just call `stop`
 You can see the animation in the console on the [demo page](http://tholman.com/dom-animator). There's also a [video](http://tholman.com/dom-animator/video), if you're really confused.
 
 
-###Browser support
+### Browser support
 
 Dom Animator has been tested in the latest stable builds of Safari, Chrome & Firefox... Chrome displays the a little cleaner, since it supports newlines in the console. But all the browsers work.
 
@@ -71,4 +71,4 @@ Dom Animator has been tested in the latest stable builds of Safari, Chrome & Fir
 
 The MIT License (MIT)
 
-Copyright (C) 2015 ~ [Tim Holman](http://tholman.com) ~ timothy.w.holman@gmail.com
+Copyright (C) ~ [Tim Holman](http://tholman.com) ~ timothy.w.holman@gmail.com
